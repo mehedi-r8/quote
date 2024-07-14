@@ -1,11 +1,8 @@
 from rest_framework import viewsets
 
-from .authentication import ApiKeyAuthentication
+from Quote.authentication import ApiKeyAuthentication
 from .models import Writer, Quote
 from .serializers import WriterSerializer, QuoteSerializer
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.authentication import BaseAuthentication
-from rest_framework.exceptions import AuthenticationFailed
 
 
 class WriterViewSet(viewsets.ModelViewSet):
